@@ -18,7 +18,7 @@ phases:
 
   pre_build:
     commands:
-	  - echo build with maven 
+      - echo build with maven... 
       - mvn clean install	  
       - echo Logging in to Amazon EKS...
       - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_CLUSTER_NAME
