@@ -43,6 +43,9 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+      - echo Writing image definitions file...
+      - printf '[{"name":"helloworld-0.0.1.war","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - cat imagedefinitions.json
       - echo Push the latest image to cluster
       - kubectl apply -f eks_cicd/deployment.yaml
       - kubectl apply -f eks_cicd/service.yaml
@@ -50,4 +53,5 @@ phases:
       
   artifacts:
   files:
-#      - target/helloworld-0.0.1.war    
+      - imagedefinitions.json
+      - target/helloworld-0.0.1.war    
