@@ -18,6 +18,7 @@ phases:
 
   pre_build:
     commands:
+      - mvn clean install
       - echo Logging in to Amazon EKS...
       - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_CLUSTER_NAME
       - echo check config 
@@ -46,3 +47,7 @@ phases:
       - kubectl apply -f eks_cicd/deployment.yaml
       - kubectl apply -f eks_cicd/service.yaml
       - kubectl rollout restart -f eks_cicd/deployment.yaml
+      
+  artifacts:
+  files:
+      - target/helloworld-0.0.1.war    
