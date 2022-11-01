@@ -50,4 +50,4 @@ phases:
       
   artifacts:
   files:
-      - target/helloworld-0.0.1.war    
+#      - target/helloworld-0.0.1.war    
