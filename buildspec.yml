@@ -51,5 +51,11 @@ phases:
       - kubectl apply -f eks_cicd/deployment.yaml
       - kubectl apply -f eks_cicd/service.yaml
       - kubectl rollout restart -f eks_cicd/deployment.yaml
+  
+    artifacts:
+      files:
+      - imagedefinitions.json
+      - target/helloworld-0.0.1.war
+  
       
   
