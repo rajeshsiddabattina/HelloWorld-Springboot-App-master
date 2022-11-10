@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:11
 WORKDIR /usr/app
 RUN mvn clean install
 EXPOSE 8080
