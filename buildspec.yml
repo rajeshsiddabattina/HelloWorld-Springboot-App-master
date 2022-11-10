@@ -15,6 +15,8 @@ phases:
       - kubectl version --short --client
       - chmod +x eks_cicd/prereqs.sh
       - sh eks_cicd/prereqs.sh
+      - echo maven build process...
+      - mvn clean install
 
   pre_build:
     commands:
