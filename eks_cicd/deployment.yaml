@@ -18,7 +18,7 @@ spec:
         app: java-app
     spec:
       containers:
-        - image: 538648446500.dkr.ecr.us-west-2.amazonaws.com/aws-images-ecr-repo:latest
+        - image: 538648446500.dkr.ecr.us-west-2.amazonaws.com/java-app-reg:latest
           imagePullPolicy: Always
           name: java-app
           ports:
