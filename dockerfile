@@ -1,4 +1,4 @@
-FROM linux:8-slim
+FROM openjdk:17-oracle
 ADD ./target/helloworld-0.0.1.war /usr/app/helloworld-0.0.1.war
 WORKDIR /usr/app
 EXPOSE 8080
