@@ -16,6 +16,6 @@ public class WelcomeController {
 		
 		
 		
-		return "Hello World! version v1 "; //"application/json" mean this is a text not a redirect
+		return "Hello welcome to aws world ! version v1 "; //"application/json" mean this is a text not a redirect
 	}
 }
