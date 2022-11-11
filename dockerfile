@@ -1,4 +1,4 @@
-FROM oraclelinux:7-slim
+FROM alexismp/openjdk11-pdfunite
 ADD ./target/helloworld-0.0.1.war /usr/app/helloworld-0.0.1.war
 WORKDIR /usr/app
 EXPOSE 8080
