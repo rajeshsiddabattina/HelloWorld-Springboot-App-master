@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/windows/nanoserver:1809
+FROM alpine:3.16
 ADD ./target/helloworld-0.0.1.war /usr/app/helloworld-0.0.1.war
 WORKDIR /usr/app
 EXPOSE 8080
